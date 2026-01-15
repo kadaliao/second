@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B01445E502E99D068EF6FC55 /* SecondApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86B2090D8CBCA4326F5C2EE /* SecondApp.swift */; };
+		8469B68448E5BD04132C8E56 /* TOTPParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11944E03D0B4E86F4E3E14D0 /* TOTPParameters.swift */; };
+		0133373E1108B3B8094EB3A1 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244BB8BC7225CE230E12CA3B /* Token.swift */; };
+		F726D8963D1BC30063D52F1E /* Vault.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E92F7968EE1130CD24BD44 /* Vault.swift */; };
+		F1489F24C0F4C8EFE1ADD0A2 /* Base32Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A787A05A1F132909C44FE0 /* Base32Decoder.swift */; };
+		79A30FD93373F1F72BEE403B /* EncryptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A40049DD011F015961807E /* EncryptionService.swift */; };
+		727D9539B3F7D2320C450F7A /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203AACB57C64E4B8E9A9586D /* KeychainService.swift */; };
+		658DC41106BC532DC8532A1E /* QRCodeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F58991D20260A5B1605644 /* QRCodeParser.swift */; };
+		11578ACA709D9E6AB51F7902 /* TOTPGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A662C9A38DADA76F30777 /* TOTPGenerator.swift */; };
+		2E905113B15BCF2B016890E1 /* iCloudSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0813CC69C091EC9C0653C5A6 /* iCloudSyncService.swift */; };
+		2B661077FAFAE287896C051C /* ClipboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4936E43F3D48A698CAF60B30 /* ClipboardHelper.swift */; };
+		E56111A740A9613DA98F739D /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A666D2ABD7BCFF9C951EC822 /* Logger.swift */; };
+		67E06CB5ADB3CFFA5D33ACE1 /* AddTokenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40426F9170AE1434A6E3CEE7 /* AddTokenViewModel.swift */; };
+		A23131F24D7A02F7046ACF2D /* TokenListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD819725D4BFB33FD7902CC1 /* TokenListViewModel.swift */; };
+		D22DB293CE97CAFB82CB0841 /* AddTokenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B527B8E353DBA4FF2F9BF6A /* AddTokenView.swift */; };
+		93C465422DD2B4D01D451E78 /* CountdownTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F035DCB34DB562179773E /* CountdownTimerView.swift */; };
+		0D8BB736C8F936BB2145F390 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1ACCFD1D35E969D9BF2EBF /* EmptyStateView.swift */; };
+		532D2F01F2A69BF5CCFCBB2C /* QRCodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFAF5CAF0989B53BCB6CF3C /* QRCodeScannerView.swift */; };
+		536591CE0C1794C044E513FC /* TokenCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AC43EF7FC06D3591D7ECB9 /* TokenCardView.swift */; };
+		E356BE4514563A7B18615FB7 /* TokenListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0CE077688B9E318A96277D /* TokenListView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D43A46F793479E5B5A92D21E /* Second.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Second.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51570F093954B65F706F7C19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD79989A2EFF7439F558E86D /* Second.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Second.entitlements; sourceTree = "<group>"; };
+		B86B2090D8CBCA4326F5C2EE /* SecondApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondApp.swift; sourceTree = "<group>"; };
+		11944E03D0B4E86F4E3E14D0 /* TOTPParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPParameters.swift; sourceTree = "<group>"; };
+		244BB8BC7225CE230E12CA3B /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		C1E92F7968EE1130CD24BD44 /* Vault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vault.swift; sourceTree = "<group>"; };
+		75A787A05A1F132909C44FE0 /* Base32Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base32Decoder.swift; sourceTree = "<group>"; };
+		13A40049DD011F015961807E /* EncryptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionService.swift; sourceTree = "<group>"; };
+		203AACB57C64E4B8E9A9586D /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		31F58991D20260A5B1605644 /* QRCodeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeParser.swift; sourceTree = "<group>"; };
+		9A5A662C9A38DADA76F30777 /* TOTPGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPGenerator.swift; sourceTree = "<group>"; };
+		0813CC69C091EC9C0653C5A6 /* iCloudSyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudSyncService.swift; sourceTree = "<group>"; };
+		4936E43F3D48A698CAF60B30 /* ClipboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardHelper.swift; sourceTree = "<group>"; };
+		A666D2ABD7BCFF9C951EC822 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		40426F9170AE1434A6E3CEE7 /* AddTokenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTokenViewModel.swift; sourceTree = "<group>"; };
+		DD819725D4BFB33FD7902CC1 /* TokenListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenListViewModel.swift; sourceTree = "<group>"; };
+		9B527B8E353DBA4FF2F9BF6A /* AddTokenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTokenView.swift; sourceTree = "<group>"; };
+		CE4F035DCB34DB562179773E /* CountdownTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimerView.swift; sourceTree = "<group>"; };
+		3A1ACCFD1D35E969D9BF2EBF /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		AAFAF5CAF0989B53BCB6CF3C /* QRCodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerView.swift; sourceTree = "<group>"; };
+		96AC43EF7FC06D3591D7ECB9 /* TokenCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenCardView.swift; sourceTree = "<group>"; };
+		0E0CE077688B9E318A96277D /* TokenListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenListView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04FB5DF59766A9852E5DD2D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		71D2E56247FE75C3DCE9B609 = {
+			isa = PBXGroup;
+			children = (
+				C94F4D33E9181E7041C9D9C2 /* Second */,
+				30772F61AC9BDC8631745269 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		30772F61AC9BDC8631745269 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D43A46F793479E5B5A92D21E /* Second.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C94F4D33E9181E7041C9D9C2 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				AB8D408CB1881C666AAC0831 /* App */,
+				C9E04F99D8E7C9D4D391AEF8 /* Models */,
+				9C035E7454E6255EF4EA445C /* Services */,
+				32120412CDF92CE44C01AF8D /* Utilities */,
+				EE1E649591DBDF61DE2E4396 /* ViewModels */,
+				9F58BDF7D4F04F6C4DC3CB6C /* Views */,
+				AE59D88C5460D2413CB142C1 /* Resources */,
+				51570F093954B65F706F7C19 /* Info.plist */,
+				DD79989A2EFF7439F558E86D /* Second.entitlements */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
+		AB8D408CB1881C666AAC0831 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B86B2090D8CBCA4326F5C2EE /* SecondApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C9E04F99D8E7C9D4D391AEF8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				244BB8BC7225CE230E12CA3B /* Token.swift */,
+				11944E03D0B4E86F4E3E14D0 /* TOTPParameters.swift */,
+				C1E92F7968EE1130CD24BD44 /* Vault.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9C035E7454E6255EF4EA445C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				75A787A05A1F132909C44FE0 /* Base32Decoder.swift */,
+				13A40049DD011F015961807E /* EncryptionService.swift */,
+				0813CC69C091EC9C0653C5A6 /* iCloudSyncService.swift */,
+				203AACB57C64E4B8E9A9586D /* KeychainService.swift */,
+				31F58991D20260A5B1605644 /* QRCodeParser.swift */,
+				9A5A662C9A38DADA76F30777 /* TOTPGenerator.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		32120412CDF92CE44C01AF8D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4936E43F3D48A698CAF60B30 /* ClipboardHelper.swift */,
+				A666D2ABD7BCFF9C951EC822 /* Logger.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		EE1E649591DBDF61DE2E4396 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				40426F9170AE1434A6E3CEE7 /* AddTokenViewModel.swift */,
+				DD819725D4BFB33FD7902CC1 /* TokenListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9F58BDF7D4F04F6C4DC3CB6C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F8A961A65445D96B693D0256 /* Components */,
+				9B527B8E353DBA4FF2F9BF6A /* AddTokenView.swift */,
+				0E0CE077688B9E318A96277D /* TokenListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F8A961A65445D96B693D0256 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CE4F035DCB34DB562179773E /* CountdownTimerView.swift */,
+				3A1ACCFD1D35E969D9BF2EBF /* EmptyStateView.swift */,
+				AAFAF5CAF0989B53BCB6CF3C /* QRCodeScannerView.swift */,
+				96AC43EF7FC06D3591D7ECB9 /* TokenCardView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		AE59D88C5460D2413CB142C1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B312520996714357D2106BD4 /* Second */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFD04581184175117C78D9AC /* Build configuration list for PBXNativeTarget "Second" */;
+			buildPhases = (
+				FB61758D0F0FDA4BA867C3D5 /* Sources */,
+				04FB5DF59766A9852E5DD2D0 /* Frameworks */,
+				DDCF50C29294D4414F3F7C1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Second;
+			productName = Second;
+			productReference = D43A46F793479E5B5A92D21E /* Second.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9E727FDD3AEC8274F4668544 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					B312520996714357D2106BD4 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 022E0F2E8ECAC35F5510DD6F /* Build configuration list for PBXProject "Second" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 71D2E56247FE75C3DCE9B609;
+			productRefGroup = 30772F61AC9BDC8631745269 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B312520996714357D2106BD4 /* Second */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DDCF50C29294D4414F3F7C1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB61758D0F0FDA4BA867C3D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B01445E502E99D068EF6FC55 /* SecondApp.swift in Sources */,
+				8469B68448E5BD04132C8E56 /* TOTPParameters.swift in Sources */,
+				0133373E1108B3B8094EB3A1 /* Token.swift in Sources */,
+				F726D8963D1BC30063D52F1E /* Vault.swift in Sources */,
+				F1489F24C0F4C8EFE1ADD0A2 /* Base32Decoder.swift in Sources */,
+				79A30FD93373F1F72BEE403B /* EncryptionService.swift in Sources */,
+				727D9539B3F7D2320C450F7A /* KeychainService.swift in Sources */,
+				658DC41106BC532DC8532A1E /* QRCodeParser.swift in Sources */,
+				11578ACA709D9E6AB51F7902 /* TOTPGenerator.swift in Sources */,
+				2E905113B15BCF2B016890E1 /* iCloudSyncService.swift in Sources */,
+				2B661077FAFAE287896C051C /* ClipboardHelper.swift in Sources */,
+				E56111A740A9613DA98F739D /* Logger.swift in Sources */,
+				67E06CB5ADB3CFFA5D33ACE1 /* AddTokenViewModel.swift in Sources */,
+				A23131F24D7A02F7046ACF2D /* TokenListViewModel.swift in Sources */,
+				D22DB293CE97CAFB82CB0841 /* AddTokenView.swift in Sources */,
+				93C465422DD2B4D01D451E78 /* CountdownTimerView.swift in Sources */,
+				0D8BB736C8F936BB2145F390 /* EmptyStateView.swift in Sources */,
+				532D2F01F2A69BF5CCFCBB2C /* QRCodeScannerView.swift in Sources */,
+				536591CE0C1794C044E513FC /* TokenCardView.swift in Sources */,
+				E356BE4514563A7B18615FB7 /* TokenListView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7BF9B188E350BF914680EA5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = Second/Second.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Second/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.second.totp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB9D50511D0363A30239E2B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = Second/Second.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Second/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.second.totp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		022E0F2E8ECAC35F5510DD6F /* Build configuration list for PBXProject "Second" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BF9B188E350BF914680EA5A /* Debug */,
+				DB9D50511D0363A30239E2B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFD04581184175117C78D9AC /* Build configuration list for PBXNativeTarget "Second" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BF9B188E350BF914680EA5A /* Debug */,
+				DB9D50511D0363A30239E2B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9E727FDD3AEC8274F4668544 /* Project object */;
+}

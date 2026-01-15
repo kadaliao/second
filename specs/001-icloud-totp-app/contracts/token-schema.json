@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Token",
+  "description": "TOTP token entity schema for iCloud 2FA app",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for the token (UUID)"
+    },
+    "issuer": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100,
+      "description": "Service name (e.g., GitHub, Google)"
+    },
+    "account": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "description": "Username or email (e.g., user@example.com)"
+    },
+    "secret": {
+      "type": "string",
+      "pattern": "^[A-Z2-7]+=*$",
+      "minLength": 16,
+      "description": "Base32-encoded shared secret (uppercase, A-Z and 2-7, optional padding)"
+    },
+    "digits": {
+      "type": "integer",
+      "enum": [6, 8],
+      "description": "Number of digits in TOTP code"
+    },
+    "period": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Time step in seconds (default: 30)"
+    },
+    "algorithm": {
+      "type": "string",
+      "enum": ["SHA1", "SHA256", "SHA512"],
+      "description": "HMAC algorithm for TOTP generation"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of token creation"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of last modification"
+    }
+  },
+  "required": ["id", "issuer", "account", "secret", "digits", "period", "algorithm", "createdAt", "updatedAt"],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "issuer": "GitHub",
+      "account": "user@example.com",
+      "secret": "JBSWY3DPEHPK3PXP",
+      "digits": 6,
+      "period": 30,
+      "algorithm": "SHA1",
+      "createdAt": "2026-01-15T10:30:00Z",
+      "updatedAt": "2026-01-15T10:30:00Z"
+    },
+    {
+      "id": "987f6543-e21c-45d6-b789-987654321000",
+      "issuer": "Google",
+      "account": "user@gmail.com",
+      "secret": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ",
+      "digits": 8,
+      "period": 30,
+      "algorithm": "SHA256",
+      "createdAt": "2026-01-15T11:00:00Z",
+      "updatedAt": "2026-01-15T12:00:00Z"
+    }
+  ]
+}

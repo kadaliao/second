@@ -1,0 +1,49 @@
+# SwiftLint Configuration for Second TOTP App
+# Swift 5.9+, iOS 16+
+
+# Paths to include/exclude
+included:
+  - Second
+  - SecondTests
+
+excluded:
+  - Pods
+  - .build
+  - DerivedData
+  - Second/Resources/Assets.xcassets
+
+# Rules
+disabled_rules:
+  - trailing_whitespace
+  - line_length
+
+opt_in_rules:
+  - empty_count
+  - explicit_init
+  - force_unwrapping
+  - implicitly_unwrapped_optional
+
+# Rule configurations
+identifier_name:
+  min_length: 2
+  max_length: 50
+
+type_name:
+  min_length: 3
+  max_length: 50
+
+function_body_length:
+  warning: 60
+  error: 100
+
+file_length:
+  warning: 500
+  error: 1000
+
+# Custom rules
+custom_rules:
+  no_print:
+    name: "No Print Statements"
+    regex: "print\\("
+    message: "Use Logger instead of print()"
+    severity: warning

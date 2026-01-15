@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Vault",
+  "description": "Encrypted vault container for TOTP tokens",
+  "type": "object",
+  "properties": {
+    "tokens": {
+      "type": "array",
+      "description": "Array of Token entities",
+      "items": {
+        "$ref": "token-schema.json"
+      },
+      "default": []
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Schema version for migration compatibility (current: 1)"
+    },
+    "lastModified": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of last vault modification"
+    }
+  },
+  "required": ["tokens", "version", "lastModified"],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "tokens": [
+        {
+          "id": "123e4567-e89b-12d3-a456-426614174000",
+          "issuer": "GitHub",
+          "account": "user@example.com",
+          "secret": "JBSWY3DPEHPK3PXP",
+          "digits": 6,
+          "period": 30,
+          "algorithm": "SHA1",
+          "createdAt": "2026-01-15T10:30:00Z",
+          "updatedAt": "2026-01-15T10:30:00Z"
+        }
+      ],
+      "version": 1,
+      "lastModified": "2026-01-15T10:30:00Z"
+    },
+    {
+      "tokens": [],
+      "version": 1,
+      "lastModified": "2026-01-15T09:00:00Z"
+    }
+  ],
+  "notes": {
+    "encryption": {
+      "description": "This JSON structure is serialized to Data, then encrypted with AES-GCM before storage in iCloud",
+      "algorithm": "AES-256-GCM",
+      "storage": "NSUbiquitousKeyValueStore",
+      "key_storage": "Keychain (kSecAttrSynchronizable=true)"
+    },
+    "encrypted_format": {
+      "description": "The encrypted vault stored in iCloud is raw Data (AES.GCM.SealedBox.combined)",
+      "structure": "nonce (12 bytes) + ciphertext (variable) + authentication_tag (16 bytes)",
+      "key": "vault (NSUbiquitousKeyValueStore key)"
+    }
+  }
+}
