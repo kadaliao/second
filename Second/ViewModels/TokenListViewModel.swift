@@ -36,6 +36,9 @@ class TokenListViewModel: ObservableObject {
     private let iCloudService = iCloudSyncService()
     private var syncObserver: NSObjectProtocol?
     private var cancellables = Set<AnyCancellable>()
+#if DEBUG
+    private let screenshotMode = ProcessInfo.processInfo.environment["SCREENSHOT_MODE"]
+#endif
 
     /// Sync status message for UI display
     var syncStatusMessage: String? {
@@ -112,6 +115,13 @@ class TokenListViewModel: ObservableObject {
         isLoading = true
         errorMessage = nil
 
+#if DEBUG
+        if let mode = screenshotMode {
+            loadScreenshotData(mode: mode)
+            return
+        }
+#endif
+
         do {
             // Load or generate vault key
             if KeychainService.vaultKeyExists() {
@@ -156,6 +166,45 @@ class TokenListViewModel: ObservableObject {
 
         isLoading = false
     }
+
+#if DEBUG
+    @MainActor
+    private func loadScreenshotData(mode: String) {
+        tokens = [
+            Token(
+                issuer: "GitHub",
+                account: "octo@github.com",
+                secret: "JBSWY3DPEHPK3PXP"
+            ),
+            Token(
+                issuer: "Google",
+                account: "user@gmail.com",
+                secret: "JBSWY3DPEHPK3PXP"
+            ),
+            Token(
+                issuer: "AWS",
+                account: "devops@company.com",
+                secret: "GEZDGNBVGY3TQOJQ"
+            ),
+            Token(
+                issuer: "Notion",
+                account: "team@workspace.com",
+                secret: "MZXW6YTBOI======"
+            )
+        ]
+        lastSyncDate = Date().addingTimeInterval(-300)
+        isSyncing = false
+        errorMessage = nil
+        isLoading = false
+
+        if mode == "empty" {
+            tokens = []
+        } else if mode == "edit", let firstToken = tokens.first {
+            tokenToEdit = firstToken
+            showingEditToken = true
+        }
+    }
+#endif
 
     /// Save vault to iCloud
     @MainActor

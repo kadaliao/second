@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		0133373E1108B3B8094EB3A1 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244BB8BC7225CE230E12CA3B /* Token.swift */; };
 		03D924BB5C56FBE9F4745004 /* EditTokenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BAF46F1FDE25DC5BAD95CF /* EditTokenViewModel.swift */; };
+		06D455A229704C8FA4E09944 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F88BE95E794DD2ADF8A122 /* Assets.xcassets */; };
+		B2D6CE0EEFCE49E19B04A295 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 188CD370A8CE485AA3C1D5AB /* Localizable.xcstrings */; };
 		0D8BB736C8F936BB2145F390 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1ACCFD1D35E969D9BF2EBF /* EmptyStateView.swift */; };
 		11578ACA709D9E6AB51F7902 /* TOTPGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A662C9A38DADA76F30777 /* TOTPGenerator.swift */; };
 		22698D3072CA43AE875FA159 /* ErrorStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5E8341CCAF42DE8AB5B6D5 /* ErrorStateView.swift */; };
 		2B661077FAFAE287896C051C /* ClipboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4936E43F3D48A698CAF60B30 /* ClipboardHelper.swift */; };
-		06D455A229704C8FA4E09944 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F88BE95E794DD2ADF8A122 /* Assets.xcassets */; };
-		A0460CA5DF17A08BE57720BA /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1F797EE326AC753EE58EA126 /* PrivacyInfo.xcprivacy */; };
 		2E905113B15BCF2B016890E1 /* iCloudSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0813CC69C091EC9C0653C5A6 /* iCloudSyncService.swift */; };
 		30AE439A9A0982E8633A7BF6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28834B9BAFA1111C9EDF2996 /* SettingsView.swift */; };
 		532D2F01F2A69BF5CCFCBB2C /* QRCodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFAF5CAF0989B53BCB6CF3C /* QRCodeScannerView.swift */; };
@@ -27,6 +27,7 @@
 		81CA4BD88C05EDF1959253DF /* iCloudExportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96304DA8A0C860FC2CEBD0F0 /* iCloudExportViewModel.swift */; };
 		8469B68448E5BD04132C8E56 /* TOTPParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11944E03D0B4E86F4E3E14D0 /* TOTPParameters.swift */; };
 		93C465422DD2B4D01D451E78 /* CountdownTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F035DCB34DB562179773E /* CountdownTimerView.swift */; };
+		A0460CA5DF17A08BE57720BA /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1F797EE326AC753EE58EA126 /* PrivacyInfo.xcprivacy */; };
 		A23131F24D7A02F7046ACF2D /* TokenListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD819725D4BFB33FD7902CC1 /* TokenListViewModel.swift */; };
 		A678475AA2F0478170798E83 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AF41FC97DF98B3468B7489 /* SettingsViewModel.swift */; };
 		B01445E502E99D068EF6FC55 /* SecondApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86B2090D8CBCA4326F5C2EE /* SecondApp.swift */; };
@@ -45,6 +46,7 @@
 		11944E03D0B4E86F4E3E14D0 /* TOTPParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPParameters.swift; sourceTree = "<group>"; };
 		13A40049DD011F015961807E /* EncryptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionService.swift; sourceTree = "<group>"; };
 		16BAF46F1FDE25DC5BAD95CF /* EditTokenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditTokenViewModel.swift; path = Second/ViewModels/EditTokenViewModel.swift; sourceTree = SOURCE_ROOT; };
+		188CD370A8CE485AA3C1D5AB /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		1F797EE326AC753EE58EA126 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		203AACB57C64E4B8E9A9586D /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		244BB8BC7225CE230E12CA3B /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -54,7 +56,6 @@
 		3A1ACCFD1D35E969D9BF2EBF /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		40426F9170AE1434A6E3CEE7 /* AddTokenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTokenViewModel.swift; sourceTree = "<group>"; };
 		4936E43F3D48A698CAF60B30 /* ClipboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardHelper.swift; sourceTree = "<group>"; };
-		B8F88BE95E794DD2ADF8A122 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51570F093954B65F706F7C19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53AF41FC97DF98B3468B7489 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewModel.swift; path = Second/ViewModels/SettingsViewModel.swift; sourceTree = SOURCE_ROOT; };
 		751B40829FDD14A0ECD3E719 /* TokenSortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TokenSortView.swift; path = Second/Views/TokenSortView.swift; sourceTree = SOURCE_ROOT; };
@@ -69,6 +70,7 @@
 		AAFAF5CAF0989B53BCB6CF3C /* QRCodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerView.swift; sourceTree = "<group>"; };
 		B80E26B18DC94921B5008F06 /* TokenSortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenSortView.swift; sourceTree = "<group>"; };
 		B86B2090D8CBCA4326F5C2EE /* SecondApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondApp.swift; sourceTree = "<group>"; };
+		B8F88BE95E794DD2ADF8A122 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE5E8341CCAF42DE8AB5B6D5 /* ErrorStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateView.swift; sourceTree = "<group>"; };
 		C1E92F7968EE1130CD24BD44 /* Vault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vault.swift; sourceTree = "<group>"; };
 		CE4F035DCB34DB562179773E /* CountdownTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimerView.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				B8F88BE95E794DD2ADF8A122 /* Assets.xcassets */,
+				188CD370A8CE485AA3C1D5AB /* Localizable.xcstrings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			knownRegions = (
 				en,
 				Base,
+				zh-Hans,
 			);
 			mainGroup = 71D2E56247FE75C3DCE9B609;
 			productRefGroup = 30772F61AC9BDC8631745269 /* Products */;
@@ -270,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06D455A229704C8FA4E09944 /* Assets.xcassets in Resources */,
+				B2D6CE0EEFCE49E19B04A295 /* Localizable.xcstrings in Resources */,
 				A0460CA5DF17A08BE57720BA /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +325,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -351,6 +357,7 @@
 				CODE_SIGN_ENTITLEMENTS = Second/Second.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = HMDAVG9B8J;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -371,11 +378,14 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Second/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Second;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -383,10 +393,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.9;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -395,6 +409,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -426,6 +441,7 @@
 				CODE_SIGN_ENTITLEMENTS = Second/Second.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = HMDAVG9B8J;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -440,21 +456,28 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Second/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Second;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.second.totp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.9;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

@@ -15,6 +15,17 @@ struct AddTokenView: View {
     @State private var showingManualInput: Bool
     @State private var scannedCode: String?
     @State private var cameraPermissionDenied = false
+#if DEBUG
+    private let screenshotMode = ProcessInfo.processInfo.environment["SCREENSHOT_MODE"]
+
+    private var isScreenshotMode: Bool {
+        screenshotMode != nil
+    }
+#else
+    private var isScreenshotMode: Bool {
+        false
+    }
+#endif
 
     var onTokenAdded: ((Token) -> Void)?
 
@@ -75,7 +86,9 @@ struct AddTokenView: View {
             } else {
                 // 扫描界面
                 ZStack {
-                    if cameraPermissionDenied {
+                    if isScreenshotMode {
+                        ScreenshotScannerView()
+                    } else if cameraPermissionDenied {
                         // 相机权限被拒绝时显示的界面
                         VStack(spacing: 20) {
                             Image(systemName: "camera.fill")
@@ -160,6 +173,16 @@ struct AddTokenView: View {
                 scannedCode = nil
             }
         }
+        .onChange(of: showingManualInput) { isManual in
+            guard !isManual else { return }
+            guard !isScreenshotMode else {
+                cameraPermissionDenied = false
+                return
+            }
+            viewModel.checkCameraPermission { granted in
+                cameraPermissionDenied = !granted
+            }
+        }
         .onAppear {
             viewModel.onTokenAdded = { token in
                 onTokenAdded?(token)
@@ -167,9 +190,38 @@ struct AddTokenView: View {
             }
 
             // 检查相机权限
-            viewModel.checkCameraPermission { granted in
-                cameraPermissionDenied = !granted
+            if isScreenshotMode || showingManualInput {
+                cameraPermissionDenied = false
+            } else {
+                viewModel.checkCameraPermission { granted in
+                    cameraPermissionDenied = !granted
+                }
             }
+        }
+    }
+}
+
+private struct ScreenshotScannerView: View {
+    var body: some View {
+        GeometryReader { proxy in
+            let size = min(proxy.size.width, proxy.size.height) * 0.65
+
+            ZStack {
+                LinearGradient(
+                    colors: [Color.black, Color.black.opacity(0.85)],
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+
+                RoundedRectangle(cornerRadius: 18)
+                    .stroke(Color.white, lineWidth: 3)
+                    .frame(width: size, height: size)
+
+                Image(systemName: "qrcode.viewfinder")
+                    .font(.system(size: size * 0.35, weight: .light))
+                    .foregroundColor(Color.white.opacity(0.9))
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
 }

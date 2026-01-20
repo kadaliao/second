@@ -11,6 +11,9 @@ import SwiftUI
 struct TokenListView: View {
     @StateObject private var viewModel = TokenListViewModel()
     @State private var showingSettings = false
+#if DEBUG
+    private let screenshotMode = ProcessInfo.processInfo.environment["SCREENSHOT_MODE"]
+#endif
 
     var body: some View {
         NavigationView {
@@ -206,6 +209,23 @@ struct TokenListView: View {
             }
             .onAppear {
                 viewModel.onAppear()
+
+#if DEBUG
+                if let mode = screenshotMode {
+                    switch mode {
+                    case "add-manual":
+                        viewModel.addTokenMode = .manual
+                        viewModel.showingAddToken = true
+                    case "add-scan":
+                        viewModel.addTokenMode = .scan
+                        viewModel.showingAddToken = true
+                    case "settings":
+                        showingSettings = true
+                    default:
+                        break
+                    }
+                }
+#endif
             }
             .sheet(isPresented: $showingSettings) {
                 SettingsView()
